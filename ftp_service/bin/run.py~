@@ -1,0 +1,11 @@
+import socketserver
+import os, sys
+PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(PATH)
+from core import argvs_
+#解决编码问题
+import codecs
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+
+if __name__ == "__main__":
+    argvs_.ArgvHandler()
