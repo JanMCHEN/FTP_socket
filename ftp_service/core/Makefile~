@@ -1,3 +1,0 @@
-servives:services.c
-	gcc -shared -Wl,-soname,services -o services.so -fPIC services.c -lpthread
-
